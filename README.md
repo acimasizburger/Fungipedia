@@ -104,15 +104,19 @@ flutter run
 
 lib/
 
-├── core/ # Veri modelleri
+├── core/
 
-├── screens/ # Uygulama ekranları
+├── screens/
 
-├── widgets/ # Tekrar kullanılabilir arayüz öğeleri
+├── widgets/
 
-├── services/ # API servisleri
+├── services/
 
-└── yardımcılar/ # Yardımcı fonksiyonlar
+├── utils/
+
+├── routes/
+
+└── models/
 
 ```
 
@@ -146,7 +150,7 @@ MIT kapsamında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını
 
 ## İletişim
 
-- Proje Bağlantısı: [https://github.com/acimasizburger/Q-Flutter.git]
+- Proje Bağlantısı: [https://github.com/acimasizburger/Fungipedia.git]
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
