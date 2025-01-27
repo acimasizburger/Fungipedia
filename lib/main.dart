@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'routes/app_router.dart';
+import 'core/themes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();  // Flutter widget'larını başlat
@@ -13,10 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Fungipedia',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      themeMode: ThemeMode.light,
+      theme: lightTheme,
+      darkTheme: darkTheme,
       routerConfig: router,  // go_router yapılandırmamızı kullan
       debugShowCheckedModeBanner: false,  // Debug bandını kaldır
     );
