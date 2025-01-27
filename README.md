@@ -36,6 +36,8 @@ Keyvan Arasteh [Github](https://github.com/keyvanarasteh)
 **- Kişisel Toplama Günlüğü:**
 
 	 Kullanıcılar, buldukları mantarları kaydedebilir, fotoğraflarını yükleyebilir ve notlar ekleyebilir.
+
+
 ## Kullanılan Teknolojiler
 
 - Flutter
@@ -62,7 +64,7 @@ Keyvan Arasteh [Github](https://github.com/keyvanarasteh)
 
 ```bash
 
-git clone acimasizburger/Q-Flutter
+git clone acimasizburger/Fungipedia
 
 ```
 
