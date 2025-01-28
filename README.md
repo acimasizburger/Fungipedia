@@ -108,17 +108,13 @@ lib/
 
 ├── core/
 
-├── screens/
+├── models/
 
-├── widgets/
+├── screens/
 
 ├── services/
 
-├── utils/
-
-├── routes/
-
-└── models/
+└── widgets/
 
 ```
 
