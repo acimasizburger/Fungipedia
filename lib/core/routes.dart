@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../screens/library.dart';
 import '../screens/loading_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/login_screen.dart';
@@ -58,6 +59,13 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/search',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const SearchScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/library',
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
         child: const SearchScreen(),
