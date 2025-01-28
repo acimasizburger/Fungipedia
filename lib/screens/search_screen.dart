@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../core/constants.dart';
-import '../core/themes.dart';
+//import '../core/constants.dart';
+//import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
 
 class SearchScreen extends StatelessWidget {

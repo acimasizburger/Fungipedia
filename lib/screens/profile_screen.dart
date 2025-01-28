@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-import '../core/constants.dart';
+//import '../core/constants.dart';
 import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
 
@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(16),
               child: Column(
-                children: [
+                children: const [
                   CircleAvatar(
                     radius: 50,
                     child: Text(
@@ -42,12 +42,12 @@ class ProfileScreen extends StatelessWidget {
                   SizedBox(height: 16),
                   ListTile(
                     leading: Icon(Icons.person),
-                    title: Text("Keyvan Arasteh"),
+                    title: Text("Alperen Turan"),
                     subtitle: Text("Ad Soyad"),
                   ),
                   ListTile(
                     leading: Icon(Icons.email),
-                    title: Text("keyvan.arasteh@live.com"),
+                    title: Text("alpptrnn@gmail.com"),
                     subtitle: Text("E-posta"),
                   ),
                 ],
