@@ -10,7 +10,7 @@ class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 21, 20, 25),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SizedBox.expand(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,9 +28,9 @@ class LoadingScreen extends StatelessWidget {
             const SizedBox(height: 70),
 
             // Yükleniyor yazısı
-            const CircularProgressIndicator(
+            CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(
-                Color.fromARGB(255, 245, 110, 15),
+                Theme.of(context).colorScheme.primary,
               ),
             ),
 
@@ -40,18 +40,18 @@ class LoadingScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () => context.go("/home"),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 245, 110, 15),
+                backgroundColor: Theme.of(context).colorScheme.primary,
                 padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              child: const Text(
+              child: Text(
                 'Ana Sayfaya Git',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 251, 251, 251),
+                  color: Theme.of(context).colorScheme.onPrimary,
                 ),
               ),
             ),
