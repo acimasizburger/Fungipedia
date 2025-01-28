@@ -88,95 +88,77 @@ class HomeScreen extends StatelessWidget {
         children: [
           CustomScrollView(
             slivers: [
-              SizedBox(height: 24),
-              Text(
-                "Hızlı İşlemler",
-                style: Theme.of(context).textTheme.titleMedium,
+              SliverToBoxAdapter(
+                child: SizedBox(height: 24),
               ),
-              SizedBox(height: 16),
-              GridView.count(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                crossAxisCount: 2,
-                mainAxisSpacing: 16,
-                crossAxisSpacing: 16,
-                childAspectRatio: 1.5,
-                children: [
-                  ActionCard(
-                    icon: Icons.person,
-                    title: "Profil",
-                    color: Theme.of(context).colorScheme.primary,
-                    onTap: () => context.push("/profile"),
-                  ),
-                  ActionCard(
-                    icon: Icons.login,
-                    title: "Giriş Yap",
-                    color: Theme.of(context).colorScheme.secondary,
-                    onTap: () => context.push("/login"),
-                  ),
-                  ActionCard(
-                    icon: Icons.app_registration,
-                    title: "Kayıt Ol",
-                    color: Theme.of(context).colorScheme.tertiary,
-                    onTap: () => context.go("/register"),
-                  ),
-                  ActionCard(
-                    icon: Icons.delete,
-                    title: "Hesabı Kaldır",
-                    color: Theme.of(context).colorScheme.error,
-                    onTap: () => showDialog(
-                      context: context,
-                      builder: (context) => AlertDialog(
-                        icon: Icon(Icons.warning),
-                        title: Text("Uyarı"),
-                        content: Text(
-                            "Hesabınızı silmek istediğinizden emin misiniz?"),
-                        actions: [
-                          TextButton(
-                            onPressed: () => context.pop(),
-                            child: Text("İptal"),
-                          ),
-                          FilledButton(
-                            onPressed: () {},
-                            child: Text("Sil"),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Positioned(
-            bottom: 16,
-            left: 16,
-            right: 16,
-            child: Card(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Bir şeyler sorun...",
-                          border: InputBorder.none,
-                        ),
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.mic),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.send),
-                    ),
-                  ],
+              SliverToBoxAdapter(
+                child: Text(
+                  "Hızlı İşlemler",
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
-            ),
+              SliverToBoxAdapter(
+                child: SizedBox(height: 16),
+              ),
+              SliverGrid(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                  childAspectRatio: 1.5,
+                ),
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final actions = [
+                      ActionCard(
+                        icon: Icons.person,
+                        title: "Profil",
+                        color: Theme.of(context).colorScheme.primary,
+                        onTap: () => context.push("/profile"),
+                      ),
+                      ActionCard(
+                        icon: Icons.login,
+                        title: "Giriş Yap",
+                        color: Theme.of(context).colorScheme.secondary,
+                        onTap: () => context.push("/login"),
+                      ),
+                      ActionCard(
+                        icon: Icons.app_registration,
+                        title: "Kayıt Ol",
+                        color: Theme.of(context).colorScheme.tertiary,
+                        onTap: () => context.go("/register"),
+                      ),
+                      ActionCard(
+                        icon: Icons.delete,
+                        title: "Hesabı Kaldır",
+                        color: Theme.of(context).colorScheme.error,
+                        onTap: () => showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            icon: Icon(Icons.warning),
+                            title: Text("Uyarı"),
+                            content: Text(
+                                "Hesabınızı silmek istediğinizden emin misiniz?"),
+                            actions: [
+                              TextButton(
+                                onPressed: () => context.pop(),
+                                child: Text("İptal"),
+                              ),
+                              FilledButton(
+                                onPressed: () {},
+                                child: Text("Sil"),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ];
+                    return actions[index];
+                  },
+                  childCount: 4,
+                ),
+              ),
+            ],
           ),
         ],
       ),
