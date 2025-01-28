@@ -177,7 +177,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
             ),
             SizedBox(height: 8),
             Row(
-              children: [
+              children: const [
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(

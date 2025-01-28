@@ -68,7 +68,7 @@ final router = GoRouter(
       path: '/library',
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
-        child: const SearchScreen(),
+        child: const LibraryScreen(),
       ),
     ),
   ],
