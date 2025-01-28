@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(CupertinoIcons.bookmark),
-              title: Text('Mantar Galerisi'),
+              title: Text('Mantarlarım'),
               onTap: () => context.push("/library"),
             ),
             ListTile(
