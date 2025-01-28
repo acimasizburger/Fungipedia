@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import '../core/constants.dart';
 import '../widgets/bottom_menu.dart';
 
-class HistoryScreen extends StatefulWidget {
-  const HistoryScreen({super.key});
+class LibraryScreen extends StatefulWidget {
+  const LibraryScreen({super.key});
 
   @override
-  State<HistoryScreen> createState() => _HistoryScreenState();
+  State<LibraryScreen> createState() => _LibraryScreenState();
 }
 
-class _HistoryScreenState extends State<HistoryScreen> {
+class _LibraryScreenState extends State<LibraryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
