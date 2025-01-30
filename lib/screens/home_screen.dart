@@ -1,16 +1,9 @@
-// ana ekran
-
-//import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
-//import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
-
-//import '../core/constants.dart';
 import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
-//import '../widgets/suggested_action_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,8 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fungipedia',
-            style: Theme.of(context).textTheme.headlineMedium),
+        title: Text('Fungipedia', style: Theme.of(context).textTheme.headlineMedium),
         centerTitle: true,
         actions: [
           IconButton(
@@ -95,6 +87,7 @@ class HomeScreen extends StatelessWidget {
                 child: Text(
                   "Hızlı İşlemler",
                   style: Theme.of(context).textTheme.titleMedium,
+                  textAlign: TextAlign.center,
                 ),
               ),
               SliverToBoxAdapter(
@@ -109,101 +102,36 @@ class HomeScreen extends StatelessWidget {
                 ),
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
-                    final actions = [
-                      ActionCard(
-                        icon: Icons.person,
-                        title: "Profil",
-                        color: Theme.of(context).colorScheme.primary,
-                        onTap: () => context.push("/profile"),
+                    return Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      ActionCard(
-                        icon: Icons.login,
-                        title: "Giriş Yap",
-                        color: Theme.of(context).colorScheme.secondary,
-                        onTap: () => context.push("/login"),
-                      ),
-                      ActionCard(
-                        icon: Icons.app_registration,
-                        title: "Kayıt Ol",
-                        color: Theme.of(context).colorScheme.tertiary,
-                        onTap: () => context.go("/register"),
-                      ),
-                      ActionCard(
-                        icon: Icons.delete,
-                        title: "Hesabı Kaldır",
-                        color: Theme.of(context).colorScheme.error,
-                        onTap: () => showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                            icon: Icon(Icons.warning),
-                            title: Text("Uyarı"),
-                            content: Text(
-                                "Hesabınızı silmek istediğinizden emin misiniz?"),
-                            actions: [
-                              TextButton(
-                                onPressed: () => context.pop(),
-                                child: Text("İptal"),
-                              ),
-                              FilledButton(
-                                onPressed: () {},
-                                child: Text("Sil"),
-                              ),
-                            ],
+                      child: InkWell(
+                        onTap: () {
+                          // Hızlı işlem tıklama işlemleri
+                        },
+                        child: Center(
+                          child: Text(
+                            "İşlem ${index + 1}",
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
                         ),
                       ),
-                    ];
-                    return actions[index];
+                    );
                   },
                   childCount: 4,
                 ),
               ),
             ],
           ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: BottomMenu(),
+          ),
         ],
-      ),
-      bottomNavigationBar: BottomMenu(),
-    );
-  }
-}
-
-class ActionCard extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final Color color;
-  final VoidCallback onTap;
-
-  const ActionCard({
-    required this.icon,
-    required this.title,
-    required this.color,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(left: BorderSide(color: color, width: 4)),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(icon, size: 32, color: color),
-              SizedBox(height: 8),
-              Text(
-                title,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: color,
-                    ),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
