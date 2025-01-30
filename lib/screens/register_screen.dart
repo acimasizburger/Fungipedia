@@ -14,10 +14,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Kayıt Ol', style: Theme.of(context).textTheme.headlineMedium),
-        centerTitle: true,
-      ),
+      appBar: AppBar(),
       body: Center(
         child: SizedBox(
           width: 300,
@@ -47,7 +44,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: "Şifre",
+                  hintText: "Sifre",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -55,23 +52,41 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () => context.go("/home"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Theme.of(context).colorScheme.primary,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Sifre Tekrar",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  prefixIcon: Icon(Icons.lock_outline),
+                ),
+              ),
+              SizedBox(height: 24),
+              FilledButton(
+                onPressed: () {
+                  context.go("/home");
+                },
+                style: FilledButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: Text(
-                  'Kayıt Ol',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.onPrimary,
+                child: const Text("Kayit Ol", style: TextStyle(fontSize: 16)),
+              ),
+              SizedBox(height: 12),
+              OutlinedButton(
+                onPressed: () {
+                  context.push("/login");
+                },
+                style: OutlinedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
+                child: const Text("Giris Yap", style: TextStyle(fontSize: 16)),
               ),
             ],
           ),

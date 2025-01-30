@@ -44,15 +44,16 @@ const darkColors = {
 
 final lightTheme = ThemeData(
   brightness: Brightness.light,
-  colorScheme: ColorScheme.light(
-    primary: darkColors["primary"]!,
-    onPrimary: darkColors["onPrimary"]!,
-    secondary: darkColors["secondary"]!,
-    onSecondary: darkColors["onSecondary"]!,
-    error: darkColors["error"]!,
-    onError: darkColors["onError"]!,
-    surface: darkColors["surface"]!,
-    onSurface: darkColors["onSurface"]!,
+  colorScheme: ColorScheme(
+    brightness: Brightness.light,
+    primary: colors["primary"]!,
+    onPrimary: colors["onPrimary"]!,
+    secondary: colors["secondary"]!,
+    onSecondary: colors["onSecondary"]!,
+    error: colors["error"]!,
+    onError: colors["onError"]!,
+    surface: colors["surface"]!,
+    onSurface: colors["onSurface"]!,
   ),
   textTheme: TextTheme(
     bodySmall: GoogleFonts.lato(),
