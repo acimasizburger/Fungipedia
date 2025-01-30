@@ -122,14 +122,14 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama Tanıtım Videosu](videos/demo.mkv)
+[Uygulama Tanıtım Videosu](assets/videos/demo.mkv)
 
-![Uygulama Ekran Görüntüsü](screenshots/sc1.png)
-![Uygulama Ekran Görüntüsü](screenshots/sc2.png)
-![Uygulama Ekran Görüntüsü](screenshots/sc3.png)
-![Uygulama Ekran Görüntüsü](screenshots/sc4.png)
-![Uygulama Ekran Görüntüsü](screenshots/sc5.png)
-![Uygulama Ekran Görüntüsü](screenshots/sc6.png)
+![Uygulama Ekran Görüntüsü](assets/screenshots/sc1.png)
+![Uygulama Ekran Görüntüsü](assets/screenshots/sc2.png)
+![Uygulama Ekran Görüntüsü](assets/screenshots/sc3.png)
+![Uygulama Ekran Görüntüsü](assets/screenshots/sc4.png)
+![Uygulama Ekran Görüntüsü](assets/screenshots/sc5.png)
+![Uygulama Ekran Görüntüsü](assets/screenshots/sc6.png)
   
 
 ## Projeye Katkı Sağlama
