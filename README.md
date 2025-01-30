@@ -122,7 +122,7 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama Tanıtım Videosu](assets/videos/demo.mkv)
+[Uygulama Tanıtım Videosu](assets/videos/demo.mp4)
 
 ![Uygulama Ekran Görüntüsü](assets/screenshots/sc1.png)
 ![Uygulama Ekran Görüntüsü](assets/screenshots/sc2.png)
