@@ -16,7 +16,7 @@ Fungipedia, mantar toplama tutkunları için tasarlanmış bir rehber uygulamas�
 ## Ekibimiz
 
 -  **Danışman:**  
-Keyvan Arasteh [Github](https://github.com/keyvanarasteh)
+- Keyvan Arasteh [Github](https://github.com/keyvanarasteh)
 
 
 -  **Takım Üyeleri:**
@@ -52,7 +52,7 @@ Keyvan Arasteh [Github](https://github.com/keyvanarasteh)
 
 - Flutter SDK (sürüm 3.24.4)
 
-- Dart SDK (sürüm X.X.X)
+- Dart SDK (sürüm 3.5.4)
 
 - VS Code (sürüm 1.95.3)
 
@@ -122,8 +122,14 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama ekran görüntüleri buraya eklenecek]
+[Uygulama Tanıtım Videosu](videos/demo.mkv)
 
+![Uygulama Ekran Görüntüsü](screenshots/sc1.png)
+![Uygulama Ekran Görüntüsü](screenshots/sc2.png)
+![Uygulama Ekran Görüntüsü](screenshots/sc3.png)
+![Uygulama Ekran Görüntüsü](screenshots/sc4.png)
+![Uygulama Ekran Görüntüsü](screenshots/sc5.png)
+![Uygulama Ekran Görüntüsü](screenshots/sc6.png)
   
 
 ## Projeye Katkı Sağlama
