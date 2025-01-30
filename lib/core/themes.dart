@@ -33,7 +33,7 @@ const colors = {
 const darkColors = {
   "primary": Color.fromARGB(255, 245, 110, 15),
   "onPrimary": Color.fromARGB(255, 251, 251, 251),
-  "secondary": Color.fromARGB(255, 38, 38, 38),
+  "secondary": Color.fromARGB(255, 135, 135, 135),
   "onSecondary": Color.fromARGB(255, 251, 251, 251),
   "surface": Color.fromARGB(255, 21, 20, 25),
   "onSurface": Color.fromARGB(255, 251, 251, 251),
