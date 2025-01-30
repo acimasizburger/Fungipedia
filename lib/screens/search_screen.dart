@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+//import '../core/constants.dart';
+//import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -6,6 +9,7 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: colors["primary"],
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -17,16 +21,22 @@ class SearchScreen extends StatelessWidget {
                 filled: true,
                 fillColor: Theme.of(context).colorScheme.surfaceContainerHighest,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(50),
                   borderSide: BorderSide.none,
                 ),
                 prefixIcon: Icon(Icons.search),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.tune),
+                  onPressed: () {
+                    // Filtre dialog
+                  },
+                ),
               ),
             ),
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,14 +47,69 @@ class SearchScreen extends StatelessWidget {
                   SizedBox(height: 8),
                   Wrap(
                     spacing: 8,
-                    children: List.generate(5, (index) {
-                      return Chip(
-                        label: Text("Arama ${index + 1}"),
-                        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                      );
-                    }),
+                    children: [
+                      ActionChip(
+                        label: Text("Ağlayan Mantar"),
+                        onPressed: () {},
+                        avatar: Icon(Icons.history, size: 16),
+                      ),
+                      ActionChip(
+                        label: Text("Kültür Mantarı"),
+                        onPressed: () {},
+                        avatar: Icon(Icons.history, size: 16),
+                      ),
+                    ],
                   ),
                 ],
+              ),
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.all(16),
+            sliver: SliverGrid(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 16,
+                childAspectRatio: 0.85,
+              ),
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => Card(
+                  clipBehavior: Clip.antiAlias,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Container(
+                          color:
+                              Theme.of(context).colorScheme.secondaryContainer,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Mantar ${index + 1}",
+                              style: Theme.of(context).textTheme.titleMedium,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            Text(
+                              "Mantar bilgileri burada yer alacak.",
+                              style: Theme.of(context).textTheme.bodySmall,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                childCount: 10,
               ),
             ),
           ),
