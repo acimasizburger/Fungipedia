@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../core/themes.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -15,9 +14,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ayarlar'),
+        title: Text('Ayarlar', style: Theme.of(context).textTheme.headlineMedium),
+        centerTitle: true,
       ),
       body: ListView(
+        padding: EdgeInsets.all(16),
         children: [
           ListTile(
             leading: Icon(Icons.palette),
