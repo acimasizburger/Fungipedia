@@ -122,7 +122,7 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama Tanıtım Videosu](assets/videos/demo.mp4)
+https://github.com/user-attachments/assets/4ea74ca2-3e10-4ea8-926b-f2d082f49826
 
 ![Uygulama Ekran Görüntüsü](assets/screenshots/sc1.png)
 ![Uygulama Ekran Görüntüsü](assets/screenshots/sc2.png)
