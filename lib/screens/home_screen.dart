@@ -92,9 +92,11 @@ class HomeScreen extends StatelessWidget {
                 child: SizedBox(height: 24),
               ),
               SliverToBoxAdapter(
-                child: Text(
-                  "Hızlı İşlemler",
-                  style: Theme.of(context).textTheme.titleMedium,
+                child: Center(
+                  child: Text(
+                    "Hızlı İşlemler",
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                 ),
               ),
               SliverToBoxAdapter(
