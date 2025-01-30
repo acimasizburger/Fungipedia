@@ -32,3 +32,5 @@ flutter:
     - assets/languages/
     - assets/motions/
     - assets/fonts/
+    - assets/screenshots/
+    - assets/videos/
